@@ -1,0 +1,28 @@
+<template>
+  <div
+    class="w-full h-fit bg-center bg-cover bg-[url('/public/backgrounds/profil-bg2.png')]"
+  >
+    <div
+      class="w-full h-full bg-black/80 flex-col text-center flex items-center justify-center"
+    >
+      <div class="p-10 sm:px-32 md:px-52 w-full">
+        <WidgetsJudulSection
+          text="PROFILE KOMUNIKASI DAN ELEKTRONIKA KODAM XIV/HASANUDDIN"
+        />
+
+        <div class="flex items-center gap-5 justify-center">
+          <img src="/public/image/profil/13.jpeg" class="w-[30vw]" alt="" />
+          <p class="text-justify">
+            Komunikasi dan Elektronika Kodam XIV/Hsn atau Komlekdam XIV/Hsn
+            adalah salah satu Badan Pelaksana Tingkat Kodam, yang bertugas pokok
+            membina dan menyelenggarakan fungsi komunikasi dan elektronika di
+            jajaran Kodam XIV/Hsn. Penyelenggaraan fungsi komlek, dilaksanakan
+            melalui fungsi utamanya yang meliputi pembinaan kecabangan dan
+            Mendukung Komunikasi, elektronika di jajaran Kodam, Pernika dan Foto
+            Film Militer serta Konbekharstal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
