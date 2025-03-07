@@ -3,7 +3,7 @@
     class="w-full pt-20 pb-12 flex-col p-5 text-yellow flex items-center justify-center"
   >
     <WidgetsJudulSection text="Lapor!" subtext="Sigap, Cepat, Tanggap" />
-    <div class="bg-[#303949] p-10 w-full sm:w-[40vw]">
+    <div class="bg-[#303949] p-10 w-full md:w-[40vw]">
       <div>
         <WidgetsDataInputBaseInput
           label="Nama"
