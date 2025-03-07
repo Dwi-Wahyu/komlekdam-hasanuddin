@@ -3,23 +3,23 @@
     class="w-full min-h-screen bg-center bg-cover bg-[url('/backgrounds/program-bg1.jpeg')]"
   >
     <div
-      class="bg-black/50 p-20 flex flex-col gap-7 items-center justify-center w-full h-full"
+      class="bg-black/50 p-5 sm:p-20 flex pt-24 pb-10 flex-col gap-7 items-center justify-center w-full h-full"
     >
       <WidgetsJudulSection text="Program" :with-out-line="true" />
       <div
-        class="grid grid-cols-1 gap-20 items-center justify-center md:grid-cols-3"
+        class="grid grid-cols-1 gap-10 items-center justify-center md:grid-cols-3"
       >
-        <div class="relative aspect-[359/461] border-2 border-yellow">
+        <div class="relative w-full sm:aspect-[359/461] border-2 border-yellow">
           <img
             src="/image/program/1.png"
             class="w-full h-full object-cover"
             alt=""
           />
           <div
-            class="absolute bottom-0 bg-gradient-to-t pt-20 from-black via-black to-transparent left-0 p-5"
+            class="absolute bottom-0 bg-gradient-to-t pt-20 w-full from-black via-black to-transparent left-0 p-5"
           >
             <h1 class="font-semibold mb-1">Kegiatan Pembinaan Fisik(Binsik)</h1>
-            <p class="text-xs">
+            <p class="text-xs hidden sm:block">
               Sesuai program yang sudah dijadwalkan oleh Staf Latihan Hubdam
               XIV/Hasanuddin terus melaksanakan program Pembinaan fisik bagi
               prajurit yang akan melaksanakan UKP dan juga prajurit yang
@@ -28,17 +28,17 @@
             </p>
           </div>
         </div>
-        <div class="relative aspect-[359/461] border-2 border-yellow">
+        <div class="relative w-full sm:aspect-[359/461] border-2 border-yellow">
           <img
             src="/image/program/2.jpeg"
             class="w-full h-full object-cover"
             alt=""
           />
           <div
-            class="absolute bottom-0 bg-gradient-to-t pt-20 from-black via-black to-transparent left-0 p-5"
+            class="absolute bottom-0 bg-gradient-to-t pt-20 w-full from-black via-black to-transparent left-0 p-5"
           >
             <h1 class="font-semibold mb-1">Kegiatan Pembuatan Drone</h1>
-            <p class="text-xs">
+            <p class="text-xs hidden sm:block">
               Sesuai program yang sudah dijadwalkan oleh Staf Latihan Hubdam
               XIV/Hasanuddin terus melaksanakan program Pembinaan fisik bagi
               prajurit yang akan melaksanakan UKP dan juga prajurit yang
@@ -47,17 +47,17 @@
             </p>
           </div>
         </div>
-        <div class="relative aspect-[359/461] border-2 border-yellow">
+        <div class="relative w-full sm:aspect-[359/461] border-2 border-yellow">
           <img
             src="/image/program/3.png"
             class="w-full h-full object-cover"
             alt=""
           />
           <div
-            class="absolute bottom-0 bg-gradient-to-t pt-20 from-black via-black to-transparent left-0 p-5"
+            class="absolute bottom-0 bg-gradient-to-t pt-20 w-full from-black via-black to-transparent left-0 p-5"
           >
             <h1 class="font-semibold mb-1">Rehab Makam Komlek</h1>
-            <p class="text-xs">
+            <p class="text-xs hidden sm:block">
               Sesuai program yang sudah dijadwalkan oleh Staf Latihan Hubdam
               XIV/Hasanuddin terus melaksanakan program Pembinaan fisik bagi
               prajurit yang akan melaksanakan UKP dan juga prajurit yang
