@@ -3,7 +3,7 @@
     class="w-full h-fit bg-center bg-cover bg-[url('/public/backgrounds/profil-bg3.png')]"
   >
     <div
-      class="w-full h-full bg-gray-800/80 flex-col text-center flex items-center p-10 px-56 justify-center"
+      class="w-full h-full bg-gray-800/80 flex-col text-center flex items-center p-5 sm:p-10 sm:px-56 justify-center"
     >
       <WidgetsJudulSection text="Sejarah" />
 

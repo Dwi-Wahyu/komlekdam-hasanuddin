@@ -1,0 +1,44 @@
+<template>
+  <div
+    class="bg-[#1B1B1B] w-full flex z-40 md:flex-row flex-col gap-5 md:gap-0 items-center justify-between relative px-6 py-4"
+  >
+    <div class="flex items-center gap-1 absolute left-2 bottom-2">
+      <h1 class="text-sm">2025</h1>
+      <IconsCopyright />
+      <h1 class="text-sm">Copyright by SkytelIndo</h1>
+    </div>
+
+    <div class="flex items-center">
+      <img src="/logo/logo.png" alt="" />
+      <h1 class="font-semibold">KOMLEKDAM XIV/Hasanuddin</h1>
+    </div>
+    <div class="flex flex-col gap-1">
+      <h1 class="font-semibold">Kontak dan Sosial Media Kami</h1>
+      <div class="flex items-center gap-1">
+        <IconsWhatsapp />
+        <h1 class="text-sm">+62 8132 916 1000</h1>
+      </div>
+      <div class="flex items-center gap-1">
+        <IconsInstagram />
+        <h1 class="text-sm">@hubdamxivhasanuddin</h1>
+      </div>
+      <div class="flex items-center gap-1">
+        <IconsFacebook />
+        <h1 class="text-sm">Hubdam Hasanuddin</h1>
+      </div>
+      <div class="flex items-center gap-1">
+        <IconsTiktok />
+        <h1 class="text-sm">Komlekdam14</h1>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <h1 class="font-semibold">Alamat</h1>
+      <div class="flex items-center gap-1">
+        <IconsLocation />
+        <h1>Jl. Opu Daeng Risadju No. 420 Makassar</h1>
+      </div>
+      <img src="/image/footer-alamat.png" class="max-w-56 h-auto" alt="" />
+    </div>
+  </div>
+</template>

@@ -14,10 +14,13 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@types/axios": "^0.14.0",
+    "@vueup/vue-quill": "^1.2.0",
+    "axios": "^1.6.8",
     "nuxt": "^3.14.1592",
+    "vee-validate": "^4.15.0",
     "vue": "latest",
     "vue-router": "latest",
-    "@types/axios": "^0.14.0",
-    "axios": "^1.6.8"
+    "yup": "^1.6.1"
   }
 }

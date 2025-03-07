@@ -5,13 +5,19 @@
     <div
       class="w-full h-full bg-black/80 flex-col text-center flex items-center justify-center"
     >
-      <div class="p-10 sm:px-32 md:px-52 w-full">
+      <div class="p-5 sm:py-20 sm:px-32 md:px-52 w-full">
         <WidgetsJudulSection
           text="PROFILE KOMUNIKASI DAN ELEKTRONIKA KODAM XIV/HASANUDDIN"
         />
 
-        <div class="flex items-center gap-5 justify-center">
-          <img src="/public/image/profil/13.jpeg" class="w-[30vw]" alt="" />
+        <div
+          class="flex items-center flex-col sm:flex-row gap-5 justify-center"
+        >
+          <img
+            src="/public/image/profil/13.jpeg"
+            class="w-full sm:w-[30vw]"
+            alt=""
+          />
           <p class="text-justify">
             Komunikasi dan Elektronika Kodam XIV/Hsn atau Komlekdam XIV/Hsn
             adalah salah satu Badan Pelaksana Tingkat Kodam, yang bertugas pokok

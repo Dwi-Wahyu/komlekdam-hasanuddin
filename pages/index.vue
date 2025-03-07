@@ -1,14 +1,10 @@
 <template>
-  <div class="bg-[#1C2940] text-white">
-    <UiLandingHeader />
-    <SectionHome />
-    <SectionTentangKami />
-    <SectionProfil />
-  </div>
+  <SectionHome />
+  <SectionTentangKami />
 </template>
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "login",
+  layout: "landing",
 });
 </script>
