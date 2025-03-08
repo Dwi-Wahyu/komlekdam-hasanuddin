@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen p-16 py-10">
+  <div class="w-full min-h-screen p-5 sm:p-16 sm:py-10">
     <WidgetsJudulSection text="Form Input Berita" />
     <div class="p-5 bg-[#303949] w-full h-full">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">

@@ -37,14 +37,15 @@
     </div>
 
     <div class="flex flex-col items-center gap-7 mt-10">
-      <a
+      <button
         class="text-yellow"
         v-for="(nav, navIdx) in navigationMenu"
         :href="nav.path"
         :key="navIdx"
+        @click="navigate(nav.path)"
       >
         {{ nav.label }}
-      </a>
+      </button>
     </div>
   </div>
 </template>
@@ -69,6 +70,7 @@ function toggleIsOpen() {
 
 function navigate(route: string) {
   landingPageStore.changeLink(route);
+  toggleIsOpen();
   navigateTo(route);
 }
 

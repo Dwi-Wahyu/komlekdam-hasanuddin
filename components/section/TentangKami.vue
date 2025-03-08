@@ -1,7 +1,7 @@
 <template>
   <div class="w-full p-5 py-10 pb-16">
     <h1 class="text-yellow text-xl font-bold">Tentang Kami</h1>
-    <div class="flex flex-col items-center sm:flex-row gap-12 sm:px-5 mt-4">
+    <div class="flex flex-col items-center md:flex-row gap-12 md:px-5 mt-4">
       <div class="flex flex-col gap-3">
         <h1 class="font-bold text-2xl">KOMLEKDAM XIV/HASANUDDIN</h1>
         <p>
@@ -34,14 +34,14 @@
           :class="{ 'justify-end': (tempIdx + 1) % 2 == 0 }"
         >
           <div
-            class="flex bg-[#303949] sm:w-[70vw] items-center sm:flex-row flex-col w-full border-[3.35px] border-yellow gap-5 p-5 sm:p-7"
+            class="flex bg-[#303949] md:w-[70vw] items-center md:flex-row flex-col w-full border-[3.35px] border-yellow gap-5 p-5 md:p-7"
           >
             <img :src="temp.imgUrl" alt="" class="h-fit" />
             <div class="flex flex-col gap-3">
               <h1 class="text-lg text-yellow font-semibold">
                 {{ temp.title }}
               </h1>
-              <p class="text-sm">
+              <p class="text-md">
                 {{ temp.desc }}
               </p>
               <WidgetsButtonBaseButton

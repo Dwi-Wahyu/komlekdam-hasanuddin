@@ -3,11 +3,15 @@
     <WidgetsJudulSection text="Breaking News!" />
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-      <div v-for="(temp, tempIdx) in news" :key="tempIdx" class="flex gap-3">
+      <div
+        v-for="(temp, tempIdx) in news"
+        :key="tempIdx"
+        class="flex items-center gap-3"
+      >
         <img :src="temp.thumbnail" class="max-w-44" alt="" />
         <div>
           <h1 class="font-semibold mb-1">{{ temp.title }}</h1>
-          <p class="text-sm">{{ temp.desc }}</p>
+          <p class="text-sm hidden sm:block">{{ temp.desc }}</p>
         </div>
       </div>
     </div>

@@ -1,20 +1,20 @@
 <template>
   <div
-    class="w-full h-screen bg-center bg-cover bg-[url('/public/backgrounds/profil-bg1.jpeg')]"
+    class="w-full h-fit md:h-screen bg-center bg-cover bg-[url('/public/backgrounds/profil-bg1.jpeg')]"
   >
     <div
-      class="w-full h-full bg-black/70 flex-col text-center flex items-center justify-center"
+      class="w-full h-full bg-black/70 pt-20 p-5 flex-col text-center md:pt-10 flex items-center justify-center"
     >
       <WidgetsJudulSection text="PEJABAT KOMLEKDAM XIV/HASANUDDIN" />
 
-      <p class="text-sm mt-2 w-[50vw]">
+      <p class="text-sm mt-2 md:w-[50vw]">
         Di bawah kepemimpinan Kahubdam dan Wakahubdam, Hubdam XIV/Hasanuddin
         berperan dalam memastikan kelancaran komunikasi militer, menjaga
         keamanan informasi, dan mendukung efektivitas komando serta pengendalian
         satuan. Dengan inovasi dan profesionalisme, Hubdam terus mengembangkan
         teknologi komunikasi guna memperkuat pertahanan negara.
       </p>
-      <div class="flex gap-20 mt-3">
+      <div class="flex gap-10 md:gap-20 mt-3">
         <div class="flex flex-col items-center">
           <img src="/image/profil/1.png" alt="" class="w-[15rem]" />
           <div class="shadow px-3 flex flex-col items-center shadow-yellow">
@@ -32,13 +32,9 @@
       </div>
     </div>
   </div>
-  <div class="grid p-10 grid-cols-1 sm:grid-cols-2 gap-8 md:grid-cols-4">
-    <div
-      v-for="(pejabat, pejabatIdx) in profilPejabat"
-      :key="pejabatIdx"
-      class="flex flex-col items-center"
-      :class="{ 'col-start-2': pejabat.colStart }"
-    >
+
+  <div class="grid p-10 grid-cols-1 md:grid-cols-4 gap-8">
+    <div v-for="(pejabat, pejabatIdx) in profilPejabat" :key="pejabatIdx">
       <img :src="pejabat.imageUrl" alt="" class="w-full" />
       <div class="shadow shadow-yellow flex flex-col items-center w-full px-3">
         <h1>{{ pejabat.nama }}</h1>

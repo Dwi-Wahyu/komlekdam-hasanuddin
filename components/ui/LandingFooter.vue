@@ -1,14 +1,14 @@
 <template>
   <div
-    class="bg-[#1B1B1B] w-full flex z-40 md:flex-row flex-col gap-5 md:gap-0 items-center justify-between relative px-6 py-4"
+    class="bg-[#1B1B1B] w-full pb-16 flex z-40 md:flex-row flex-col gap-5 md:gap-0 md:items-center justify-between relative px-6 py-4"
   >
-    <div class="flex items-center gap-1 absolute left-2 bottom-2">
+    <div class="flex items-center gap-1 absolute left-6 bottom-5">
       <h1 class="text-sm">2025</h1>
       <IconsCopyright />
       <h1 class="text-sm">Copyright by SkytelIndo</h1>
     </div>
 
-    <div class="flex items-center">
+    <div class="flex justify-center items-center">
       <img src="/logo/logo.png" alt="" />
       <h1 class="font-semibold">KOMLEKDAM XIV/Hasanuddin</h1>
     </div>

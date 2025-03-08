@@ -5,11 +5,13 @@
     <div
       class="flex mb-16 gap-7 flex-col items-center justify-center w-full h-full"
     >
-      <h1 class="font-semibold text-2xl">Komlekdam XIV/Hasanuddin</h1>
-      <h1 class="font-bold text-5xl">
+      <h1 class="font-semibold text-lg md:text-2xl">
+        Komlekdam XIV/Hasanuddin
+      </h1>
+      <h1 class="font-bold text-2xl text-center sm:text-3xl md:text-5xl">
         Profesional, Adaptif dan Dicintai Rakyat
       </h1>
-      <div class="flex gap-3">
+      <div class="flex gap-3 mt-3">
         <WidgetsButtonBaseButton> Selengkapnya </WidgetsButtonBaseButton>
         <WidgetsButtonBaseButton class="text-white" variant="outline">
           Hubungi Kami
