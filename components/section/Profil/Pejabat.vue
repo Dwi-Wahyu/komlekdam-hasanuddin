@@ -33,12 +33,46 @@
     </div>
   </div>
 
-  <div class="grid p-10 grid-cols-1 md:grid-cols-4 gap-8">
-    <div v-for="(pejabat, pejabatIdx) in profilPejabat" :key="pejabatIdx">
-      <img :src="pejabat.imageUrl" alt="" class="w-full" />
+  <div class="grid sm:hidden p-10 grid-cols-1 md:grid-cols-4 gap-8">
+    <div v-for="(pejabat, pejabatIdx) in range(0, 9)" :key="pejabatIdx">
+      <img :src="profilPejabat[pejabat].imageUrl" alt="" class="w-full" />
       <div class="shadow shadow-yellow flex flex-col items-center w-full px-3">
-        <h1>{{ pejabat.nama }}</h1>
-        <h1 class="text-yellow text-sm">{{ pejabat.jabatan }}</h1>
+        <h1>{{ profilPejabat[pejabat].nama }}</h1>
+        <h1 class="text-yellow text-sm">
+          {{ profilPejabat[pejabat].jabatan }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="sm:grid hidden p-10 grid-cols-1 md:grid-cols-4 gap-8">
+    <div v-for="(pejabat, pejabatIdx) in range(0, 7)" :key="pejabatIdx">
+      <img :src="profilPejabat[pejabat].imageUrl" alt="" class="w-full" />
+      <div class="shadow shadow-yellow flex flex-col items-center w-full px-3">
+        <h1>{{ profilPejabat[pejabat].nama }}</h1>
+        <h1 class="text-yellow text-sm">
+          {{ profilPejabat[pejabat].jabatan }}
+        </h1>
+      </div>
+    </div>
+
+    <div class="col-start-2">
+      <img :src="profilPejabat[8].imageUrl" alt="" class="w-full" />
+      <div class="shadow shadow-yellow flex flex-col items-center w-full px-3">
+        <h1>{{ profilPejabat[8].nama }}</h1>
+        <h1 class="text-yellow text-sm">
+          {{ profilPejabat[8].jabatan }}
+        </h1>
+      </div>
+    </div>
+
+    <div>
+      <img :src="profilPejabat[9].imageUrl" alt="" class="w-full" />
+      <div class="shadow shadow-yellow flex flex-col items-center w-full px-3">
+        <h1>{{ profilPejabat[9].nama }}</h1>
+        <h1 class="text-yellow text-sm">
+          {{ profilPejabat[9].jabatan }}
+        </h1>
       </div>
     </div>
   </div>
@@ -51,6 +85,9 @@ type ProfilPejabat = {
   imageUrl: string;
   colStart?: boolean;
 };
+
+const range = (start: number, end: number) =>
+  Array.from({ length: end - start + 1 }, (_, i) => start + i);
 
 const profilPejabat: ProfilPejabat[] = [
   {

@@ -1,3 +1,30 @@
+<script setup lang="ts">
+import {
+  artikel,
+  beritaEksternal,
+  beritaInternal,
+} from "~/data/landing/berita";
+
+const jenisBerita = ref("internal");
+
+const berita = computed(() => {
+  switch (jenisBerita.value) {
+    case "internal":
+      return beritaInternal;
+    case "eksternal":
+      return beritaEksternal;
+    case "artikel":
+      return artikel;
+    default:
+      return beritaInternal;
+  }
+});
+
+function handleChangeJenis(jenis: string) {
+  jenisBerita.value = jenis;
+}
+</script>
+
 <template>
   <div class="md:block hidden">
     <div
@@ -9,70 +36,62 @@
           <div class="flex-grow border border-yellow"></div>
         </div>
         <div class="flex justify-center gap-3 my-3 mb-5">
-          <WidgetsButtonBaseButton class="rounded-lg">
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('artikel')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'artikel' ? 'primary' : 'outline'"
+          >
             Artikel
           </WidgetsButtonBaseButton>
-          <WidgetsButtonBaseButton class="rounded-lg">
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('eksternal')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'eksternal' ? 'primary' : 'outline'"
+          >
             External
           </WidgetsButtonBaseButton>
-          <WidgetsButtonBaseButton class="rounded-lg">
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('internal')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'internal' ? 'primary' : 'outline'"
+          >
             Internal
           </WidgetsButtonBaseButton>
         </div>
-        <div class="flex gap-4 flex-col md:flex-row">
+        <div class="flex gap-5 flex-col md:flex-row">
           <div>
             <h1 class="font-semibold text-lg mb-2">
-              Novak appeals in court against dearless Care cancellation of
-              Australian
+              {{ berita[0].judul }}
             </h1>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply
-              random text. It has roots in a piece of classical Latin literature
-              from 45 BC, making it over 2000 years old. Richard McClintock, a
-              Latin professor at Hampden-Sydney College in Virginia, looked up
-              one of the more obscure Latin......
+              {{ berita[0].content }}
             </p>
           </div>
-          <img src="/image/berita/1.png" class="sm:max-w-[30rem]" alt="" />
+          <img :src="berita[0].imgUrl" class="sm:max-w-[30rem]" alt="" />
         </div>
       </div>
     </div>
     <div class="px-5 md:px-16 py-10">
       <div class="grid grid-cols-1 sm:grid-cols-2">
         <div class="flex gap-3">
-          <img src="/image/berita/2.png" class="max-w-40" alt="" />
+          <img :src="berita[1].imgUrl" class="max-w-40" alt="" />
           <div>
             <h1 class="mb-2 font-semibold text-lg">
-              African Nation Are Struggling To Save
+              {{ berita[1].judul }}
             </h1>
             <p class="text-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it ......
+              {{ berita[1].content }}
             </p>
           </div>
         </div>
         <div class="flex gap-3">
-          <img src="/image/berita/3.png" class="max-w-40" alt="" />
+          <img :src="berita[2].imgUrl" class="max-w-40" alt="" />
           <div>
-            <h1 class="mb-2 font-semibold text-lg">How to get best deals on</h1>
+            <h1 class="mb-2 font-semibold text-lg">
+              {{ berita[2].judul }}
+            </h1>
             <p class="text-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting ......
+              {{ berita[2].content }}
             </p>
           </div>
         </div>
@@ -90,13 +109,25 @@
           <div class="flex-grow border border-yellow"></div>
         </div>
         <div class="flex justify-center gap-3 my-4 mb-5">
-          <WidgetsButtonBaseButton class="rounded-lg">
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('artikel')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'artikel' ? 'primary' : 'outline'"
+          >
             Artikel
           </WidgetsButtonBaseButton>
-          <WidgetsButtonBaseButton class="rounded-lg">
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('eksternal')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'eksternal' ? 'primary' : 'outline'"
+          >
             External
           </WidgetsButtonBaseButton>
-          <WidgetsButtonBaseButton class="rounded-lg">
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('internal')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'internal' ? 'primary' : 'outline'"
+          >
             Internal
           </WidgetsButtonBaseButton>
         </div>
@@ -108,12 +139,11 @@
 
           <div class="absolute bottom-0 left-0 p-5 text-wrap z-30">
             <h1 class="text-white font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              ipsa.
+              {{ berita[0].judul }}
             </h1>
           </div>
 
-          <img src="/image/berita/1.png" alt="" class="w-full shadow" />
+          <img :src="berita[0].imgUrl" alt="" class="w-full shadow" />
         </div>
 
         <div class="relative mb-4 cursor-pointer">
@@ -123,12 +153,11 @@
 
           <div class="absolute bottom-0 left-0 p-5 text-wrap z-30">
             <h1 class="text-white font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              ipsa.
+              {{ berita[1].judul }}
             </h1>
           </div>
 
-          <img src="/image/berita/2.png" alt="" class="w-full shadow" />
+          <img :src="berita[1].imgUrl" alt="" class="w-full shadow" />
         </div>
 
         <div class="relative mb-4 cursor-pointer">
@@ -138,12 +167,11 @@
 
           <div class="absolute bottom-0 left-0 p-5 text-wrap z-30">
             <h1 class="text-white font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              ipsa.
+              {{ berita[2].judul }}
             </h1>
           </div>
 
-          <img src="/image/berita/1.png" alt="" class="w-full shadow" />
+          <img :src="berita[2].imgUrl" alt="" class="w-full shadow" />
         </div>
       </div>
     </div>

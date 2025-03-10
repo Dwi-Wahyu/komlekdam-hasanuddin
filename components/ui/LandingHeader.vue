@@ -37,15 +37,16 @@
     </div>
 
     <div class="flex flex-col items-center gap-7 mt-10">
-      <button
-        class="text-yellow"
-        v-for="(nav, navIdx) in navigationMenu"
-        :href="nav.path"
-        :key="navIdx"
-        @click="navigate(nav.path)"
-      >
-        {{ nav.label }}
-      </button>
+      <div v-for="(nav, navIdx) in navigationMenu">
+        <button
+          class="text-yellow"
+          :href="nav.path"
+          :key="navIdx"
+          @click="navigate(nav.path)"
+        >
+          {{ nav.label }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -56,6 +57,7 @@ import { useMyLandingPageStore } from "~/store/landing-page-store";
 type Navigation = {
   label: string;
   path: string;
+  child?: string[];
 };
 
 const landingPageStore = useMyLandingPageStore();
@@ -79,7 +81,7 @@ const navigationMenu: Navigation[] = [
   { label: "Profil", path: "/profil" },
   { label: "Berita", path: "/berita" },
   { label: "Zona Integritas", path: "/zona-integritas" },
-  { label: "PPID", path: "/ppid" },
+  { label: "PPID", path: "/ppid", child: [] },
   { label: "Program", path: "/program" },
   { label: "Litbang", path: "/litbang" },
   { label: "Cari Tenar", path: "/cari-tenar" },

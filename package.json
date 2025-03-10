@@ -13,11 +13,14 @@
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0"
   },
   "dependencies": {
+    "@nuxt/image": "^1.9.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@types/axios": "^0.14.0",
     "@vueup/vue-quill": "^1.2.0",
     "axios": "^1.6.8",
     "nuxt": "^3.14.1592",
+    "quill": "^2.0.3",
+    "twilio": "^5.4.5",
     "vee-validate": "^4.15.0",
     "vue": "latest",
     "vue-router": "latest",

@@ -16,7 +16,8 @@
         </p>
         <WidgetsButtonBaseButton
           variant="outline"
-          class="border-yellow text-yellow w-fit"
+          @click="navigateTo('/denkomlekdam')"
+          class="border-yellow hover:bg-yellow hover:text-white transition-all duration-300 ease-in-out text-yellow w-fit"
         >
           Selengkapnya
         </WidgetsButtonBaseButton>
@@ -28,7 +29,7 @@
       <WidgetsJudulSection text="JAJARAN KOMLEKDAM XIV/HASANUDDIN" />
       <div class="flex w-full flex-col gap-7">
         <div
-          class="flex"
+          class="flex group"
           v-for="(temp, tempIdx) in jajaran"
           :key="tempIdx"
           :class="{ 'justify-end': (tempIdx + 1) % 2 == 0 }"
@@ -36,17 +37,25 @@
           <div
             class="flex bg-[#303949] md:w-[70vw] items-center md:flex-row flex-col w-full border-[3.35px] border-yellow gap-5 p-5 md:p-7"
           >
-            <img :src="temp.imgUrl" alt="" class="h-fit" />
-            <div class="flex flex-col gap-3">
+            <div class="overflow-hidden w-full">
+              <img
+                :src="temp.imgUrl"
+                alt=""
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
               <h1 class="text-lg text-yellow font-semibold">
                 {{ temp.title }}
               </h1>
-              <p class="text-md">
+              <p class="text-sm">
                 {{ temp.desc }}
               </p>
               <WidgetsButtonBaseButton
                 variant="outline"
-                class="border-yellow mt-1 text-yellow w-fit"
+                size="sm"
+                @click="navigateTo(temp.pathSelengkapnya)"
+                class="border-yellow mt-1 hover:bg-yellow hover:text-white transition-all duration-300 ease-in-out text-yellow w-fit"
               >
                 Selengkapnya
               </WidgetsButtonBaseButton>
@@ -68,28 +77,22 @@ type Jajaran = {
 
 const jajaran: Jajaran[] = [
   {
-    title: "DENKOMLEKDAM XIV/HASANUDDIN",
+    title: "DENHUBDAM",
     desc: `Detasemen Komunikasi dan Elektronika Korem 141 yang selanjutnya disebut Denkomlek Korem 141 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 141/TP.`,
     imgUrl: "/image/tentang-kami/2.png",
-    pathSelengkapnya: "/",
+    pathSelengkapnya: "/denhubdam",
   },
   {
-    title: "DENKOMLEK KOREM 141",
-    desc: `Detasemen Komunikasi dan Elektronika Korem 141 yang selanjutnya disebut Denkomlek Korem 141 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 141/TP.`,
-    imgUrl: "/image/tentang-kami/3.png",
-    pathSelengkapnya: "/",
-  },
-  {
-    title: "DENKOMLEK KOREM 142",
+    title: "DENHUBREM 141",
     desc: `Detasemen Komunikasi dan Elektronika Korem 142 yang selanjutnya disebut Denkomlek Korem 142 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 142/Tatag.`,
-    imgUrl: "/image/tentang-kami/4.png",
-    pathSelengkapnya: "/",
+    imgUrl: "/image/tentang-kami/3.png",
+    pathSelengkapnya: "/denhubrem141",
   },
   {
-    title: "DENKOMLEK KOREM 143",
+    title: "DENHUBREM 142",
     desc: `Detasemen Komunikasi dan Elektronika Korem 143 yang selanjutnya disebut Denkomlek Korem 143 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 143/HO.`,
-    imgUrl: "/image/tentang-kami/5.png",
-    pathSelengkapnya: "/",
+    imgUrl: "/image/tentang-kami/4.png",
+    pathSelengkapnya: "/denhubrem142",
   },
 ];
 </script>

@@ -1,7 +1,7 @@
 <template>
   <WidgetsJudulSection text="Tugas dan Tanggung Jawab PPID" />
 
-  <div class="grid gap-5 grid-cols-1 md:grid-cols-2">
+  <div class="grid gap-y-5 gap-x-7 md:px-6 grid-cols-1 md:grid-cols-2">
     <div>
       <h1 class="font-semibold text-yellow">
         1. Bidang Pengelolaan Informasi dan Dokumentasi.

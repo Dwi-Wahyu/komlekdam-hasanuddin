@@ -1,13 +1,9 @@
 <template>
-  <div class="p-5 sm:p-10 sm:px-16">
+  <div class="px-5 py-8 sm:p-10 sm:px-16">
     <WidgetsJudulSection text="Arti Lambang Kapota Yudha" />
 
     <div class="flex flex-col sm:flex-row">
-      <img
-        src="/image/profil/14.png"
-        class="block sm:hidden w-full mb-4"
-        alt=""
-      />
+      <NuxtImg src="/image/profil/14.png" class="sm:hidden mb-7" alt="" />
 
       <div class="flex flex-col gap-2">
         <h1>
@@ -55,7 +51,12 @@
         </div>
       </div>
 
-      <img src="/image/profil/14.png" class="hidden sm:block w-[40vw]" alt="" />
+      <NuxtImg
+        src="/image/profil/14.png"
+        class="hidden md:block"
+        sizes="md:30vw"
+        alt=""
+      />
     </div>
   </div>
 </template>

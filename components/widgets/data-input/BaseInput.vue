@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-4">
+  <div>
     <label v-if="label" :for="id" class="block text-sm font-bold mb-2">
       {{ label }}
     </label>

@@ -1,15 +1,37 @@
 <template>
-  <div class="p-5 sm:p-10 sm:px-20">
+  <div class="px-5 sm:p-10 pb-14 sm:px-20">
     <WidgetsJudulSection text="MITRA" />
 
-    <div class="grid grid-cols-1 gap-5 sm:gap-10 sm:grid-cols-2 md:grid-cols-3">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
       <div
         v-for="(temp, tempIdx) in range(1, 9)"
-        class="shadow-yellow py-5 flex justify-center shadow"
+        @click="
+          navigateTo(`/image/profil/dokumentasi/${temp}.jpeg`, {
+            external: true,
+          })
+        "
+        class="shadow-yellow cursor-pointer py-5 flex justify-center shadow hover:shadow-lg hover:shadow-yellow transition-all ease-in-out duration-300"
         :key="tempIdx"
       >
         <img
           :src="`/image/profil/mitra/${temp}.png`"
+          class="max-w-40 max-h-40"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-10 mt-10 md:grid-cols-3">
+      <div
+        @click="
+          navigateTo(`/image/profil/dokumentasi/10.jpeg`, {
+            external: true,
+          })
+        "
+        class="md:col-start-2 shadow-yellow cursor-pointer py-5 flex justify-center shadow hover:shadow-lg hover:shadow-yellow transition-all ease-in-out duration-300"
+      >
+        <img
+          :src="`/image/profil/mitra/10.png`"
           class="max-w-40 max-h-40"
           alt=""
         />

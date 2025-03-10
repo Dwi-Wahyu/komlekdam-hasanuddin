@@ -13,11 +13,11 @@
         <div
           class="flex items-center flex-col sm:flex-row gap-5 justify-center"
         >
-          <img
-            src="/public/image/profil/13.jpeg"
-            class="w-full sm:w-[30vw]"
-            alt=""
-          />
+          <video controls class="w-full sm:w-[30vw]">
+            <source src="/public/image/profil/video.mp4" type="video/mp4" />
+            Browser tidak mendukung pemutaran video.
+          </video>
+
           <p class="text-justify">
             Komunikasi dan Elektronika Kodam XIV/Hsn atau Komlekdam XIV/Hsn
             adalah salah satu Badan Pelaksana Tingkat Kodam, yang bertugas pokok
