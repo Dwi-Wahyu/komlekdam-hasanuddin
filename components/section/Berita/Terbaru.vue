@@ -3,9 +3,10 @@ import {
   artikel,
   beritaEksternal,
   beritaInternal,
+  beritaZonaIntegritas,
 } from "~/data/landing/berita";
 
-const jenisBerita = ref("internal");
+const jenisBerita = ref("artikel");
 
 const berita = computed(() => {
   switch (jenisBerita.value) {
@@ -15,6 +16,8 @@ const berita = computed(() => {
       return beritaEksternal;
     case "artikel":
       return artikel;
+    case "zona-integritas":
+      return beritaZonaIntegritas;
     default:
       return beritaInternal;
   }
@@ -57,21 +60,32 @@ function handleChangeJenis(jenis: string) {
           >
             Internal
           </WidgetsButtonBaseButton>
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('zona-integritas')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'zona-integritas' ? 'primary' : 'outline'"
+          >
+            Zona Integritas
+          </WidgetsButtonBaseButton>
         </div>
         <div class="flex gap-5 flex-col md:flex-row">
           <div>
             <h1 class="font-semibold text-lg mb-2">
               {{ berita[0].judul }}
             </h1>
-            <p>
+            <p class="font-thin">
               {{ berita[0].content }}
             </p>
           </div>
-          <img :src="berita[0].imgUrl" class="sm:max-w-[30rem]" alt="" />
+          <img
+            :src="berita[0].imgUrl"
+            class="w-[30rem] object-cover h-[23rem]"
+            alt=""
+          />
         </div>
       </div>
     </div>
-    <div class="px-5 md:px-16 py-10">
+    <div class="px-5 md:px-16 py-14">
       <div class="grid grid-cols-1 sm:grid-cols-2">
         <div class="flex gap-3">
           <img :src="berita[1].imgUrl" class="max-w-40" alt="" />
@@ -79,7 +93,7 @@ function handleChangeJenis(jenis: string) {
             <h1 class="mb-2 font-semibold text-lg">
               {{ berita[1].judul }}
             </h1>
-            <p class="text-sm">
+            <p class="text-sm font-thin">
               {{ berita[1].content }}
             </p>
           </div>
@@ -90,11 +104,25 @@ function handleChangeJenis(jenis: string) {
             <h1 class="mb-2 font-semibold text-lg">
               {{ berita[2].judul }}
             </h1>
-            <p class="text-sm">
+            <p class="text-sm font-thin">
               {{ berita[2].content }}
             </p>
           </div>
         </div>
+      </div>
+
+      <div class="flex gap-2 text-yellow items-center justify-end mt-1">
+        <IconsChevron class="-rotate-90" width="30" height="30" />
+        <WidgetsButtonBaseButton class="rounded-lg" size="sm">
+          1
+        </WidgetsButtonBaseButton>
+        <WidgetsButtonBaseButton class="rounded-lg" size="sm">
+          2
+        </WidgetsButtonBaseButton>
+        <WidgetsButtonBaseButton class="rounded-lg" size="sm">
+          3
+        </WidgetsButtonBaseButton>
+        <IconsChevron class="rotate-90" width="30" height="30" />
       </div>
     </div>
   </div>
@@ -108,7 +136,7 @@ function handleChangeJenis(jenis: string) {
           <h1 class="text-yellow text-xl font-bold">Berita Terbaru</h1>
           <div class="flex-grow border border-yellow"></div>
         </div>
-        <div class="flex justify-center gap-3 my-4 mb-5">
+        <div class="flex justify-center flex-wrap gap-3 my-4 mb-5">
           <WidgetsButtonBaseButton
             @click="handleChangeJenis('artikel')"
             class="rounded-lg"
@@ -129,6 +157,13 @@ function handleChangeJenis(jenis: string) {
             :variant="jenisBerita === 'internal' ? 'primary' : 'outline'"
           >
             Internal
+          </WidgetsButtonBaseButton>
+          <WidgetsButtonBaseButton
+            @click="handleChangeJenis('zona-integritas')"
+            class="rounded-lg"
+            :variant="jenisBerita === 'zona-integritas' ? 'primary' : 'outline'"
+          >
+            Zona Integritas
           </WidgetsButtonBaseButton>
         </div>
 
@@ -172,6 +207,19 @@ function handleChangeJenis(jenis: string) {
           </div>
 
           <img :src="berita[2].imgUrl" alt="" class="w-full shadow" />
+        </div>
+        <div class="flex gap-2 text-yellow items-center justify-center mt-1">
+          <IconsChevron class="-rotate-90" width="30" height="30" />
+          <WidgetsButtonBaseButton class="rounded-lg" size="sm">
+            1
+          </WidgetsButtonBaseButton>
+          <WidgetsButtonBaseButton class="rounded-lg" size="sm">
+            2
+          </WidgetsButtonBaseButton>
+          <WidgetsButtonBaseButton class="rounded-lg" size="sm">
+            3
+          </WidgetsButtonBaseButton>
+          <IconsChevron class="rotate-90" width="30" height="30" />
         </div>
       </div>
     </div>

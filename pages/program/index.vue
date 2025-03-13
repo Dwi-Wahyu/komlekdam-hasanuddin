@@ -1,6 +1,6 @@
 <template>
   <SectionProgram />
-  <SectionProgramMitraMasyarakat />
+  <SectionNonProgram />
 </template>
 
 <script lang="ts" setup>

@@ -1,7 +1,8 @@
 import Twilio from "twilio";
+import "dotenv/config";
 
-const accountSid = "AC218e81685873a340fd5ed63350cfea28";
-const authToken = "3a4bdda84d8523f4bf17456d354f1bc3";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = Twilio(accountSid, authToken);
 
 export default defineEventHandler(async (event) => {
@@ -12,7 +13,7 @@ export default defineEventHandler(async (event) => {
   client.messages
     .create({
       from: "whatsapp:+14155238886",
-      body: `
+      body: ` -- Laporan Masuk -- 
         Nama : ${nama}
         Nomor : ${nomor}
         Email : ${email}
@@ -20,12 +21,11 @@ export default defineEventHandler(async (event) => {
       `,
       to: "whatsapp:+6289643144013",
     })
-    .then((message) => console.log(message.sid))
+    .then((message) => {
+      return { sucess: true };
+    })
     .catch((error) => {
       console.log(error);
       return "Gagal";
-    })
-    .finally(() => {
-      return "Berhasil mengirim pesan";
     });
 });

@@ -40,7 +40,7 @@ export default {
         orange: "#F87D46",
         green: "#03CEA4",
         primary: "#f1c40f",
-        second: "#f39c12",
+        second: "#1C2940",
         danger: "#c0392b",
         yellow: "#FFD32A",
       },

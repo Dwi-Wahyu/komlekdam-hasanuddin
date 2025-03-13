@@ -1,15 +1,12 @@
 <template>
   <div
-    class="flex w-full flex-col gap-4 h-screen"
-    :class="store.sidebarActive ? 'p-4' : 'p-1'"
+    class="flex w-full flex-col gap-2 h-full bg-[#303949] rounded-[12px]"
+    :class="store.sidebarActive ? 'p-4' : 'p-2'"
   >
-    <div class="flex flex-col items-center gap-2" v-if="!store.sidebarActive">
-      <img
-        src="@/public/logo/logo.png"
-        class="bg-white p-0 rounded-lg h-10"
-        alt=""
-      />
-      <IconsBurger class="cursor-pointer mb-4" @click="store.actionSidebar" />
+    <div class="flex flex-col items-center gap-4" v-if="!store.sidebarActive">
+      <div>
+        <NuxtImg src="/logo/logo.png" sizes="40px" />
+      </div>
 
       <div class="flex" v-for="(item, index) in store.menu">
         <img
@@ -24,20 +21,16 @@
         />
       </div>
     </div>
-    <div class="flex flex-row gap-2 items-center" v-if="store.sidebarActive">
-      <img
-        src="@/public/logo/logo.png"
-        class="bg-white p-0 rounded-lg h-12"
-        alt=""
-      />
-      <h1 class="font-bold text-xl m-0 p-0 grow text-white">
-        {{ store.appName }}
-      </h1>
-      <IconsBurger class="cursor-pointer" @click="store.actionSidebar" />
-    </div>
-    <hr class="bg-white" v-if="store.sidebarActive" />
 
-    <div class="flex flex-col mt-2 gap-0" v-if="store.sidebarActive">
+    <div v-if="store.sidebarActive" class="flex gap-2">
+      <NuxtImg src="/logo/logo.png" sizes="600px" />
+      <div>
+        <h1 class="font-semibold text-yellow">Admin Panel</h1>
+        <h1 class="text-white text-xs">Landing Page Komlekdam XIV/Hsn</h1>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-1" v-if="store.sidebarActive">
       <div
         class="flex flex-col"
         v-for="(item, index) in store.menu"
@@ -51,7 +44,7 @@
         </h1>
         <nuxt-link
           :to="item.route"
-          class="flex flex-row gap-4 p-2 rounded-t-lg cursor-pointer hover:bg-second"
+          class="flex flex-row gap-4 p-2 rounded-lg cursor-pointer hover:bg-second"
           v-if="item.child.length == 0 && item.type == 'parent'"
           :class="store.parentActive == item.route ? 'bg-second' : ''"
         >
@@ -66,7 +59,7 @@
             alt=""
           />
           <h1
-            class="text-white text-lg"
+            class="text-white"
             :class="
               store.parentActive == item.route ? 'font-bold' : 'font-base'
             "
@@ -75,7 +68,7 @@
           </h1>
         </nuxt-link>
         <div
-          class="flex flex-row gap-4 p-2 rounded-t-lg cursor-pointer hover:bg-second"
+          class="flex flex-row gap-4 p-2 rounded-lg cursor-pointer hover:bg-second"
           v-if="item.child.length > 0"
           :class="store.parentActive.includes(item.route) ? 'bg-second' : ''"
         >
@@ -90,7 +83,7 @@
             alt=""
           />
           <h1
-            class="text-white text-lg"
+            class="text-white"
             :class="
               store.parentActive.includes(item.route)
                 ? 'font-bold'
@@ -123,6 +116,12 @@
             </div>
           </div>
         </transition>
+      </div>
+
+      <div class="flex justify-center">
+        <button @click="store.actionSidebar">
+          <IconsChevron width="26" height="26" class="-rotate-90" />
+        </button>
       </div>
     </div>
   </div>

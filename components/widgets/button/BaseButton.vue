@@ -53,7 +53,7 @@ const baseClasses =
 const variantClasses = computed(() => {
   switch (props.variant) {
     case "primary":
-      return "bg-primary text-white border border-yellow hover:bg-second focus:second";
+      return "bg-primary text-white border border-yellow hover:bg-second focus:second transition-all ease-in-out duration-300";
     case "secondary":
       return "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500";
     case "outline":

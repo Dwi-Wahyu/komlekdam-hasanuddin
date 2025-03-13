@@ -1,14 +1,17 @@
 <template>
-  <div class="flex flex-row">
+  <div class="w-full min-h-screen bg-[#1C2940] text-white py-4 pr-4">
+    <UiAdminHeader />
+
     <div
-      class="flex bg-primary sidebar"
-      :class="
-        sidebarStore.sidebarActive ? 'sidebar-active' : 'sidebar-inactive'
-      "
+      class="p-4 transition-all ease-in-out duration-300 h-screen fixed left-0 top-0"
+      :class="sidebarStore.sidebarActive ? 'w-[20rem]' : 'w-[5rem]'"
     >
       <Sidebar />
     </div>
-    <div class="flex p-4">
+    <div
+      class="transition-all ease-in-out duration-300 mt-10"
+      :class="sidebarStore.sidebarActive ? 'ml-[20.5rem]' : 'ml-20'"
+    >
       <slot />
     </div>
   </div>
@@ -23,16 +26,3 @@ const authStore = useMyAuthStore();
 const router = useRouter();
 onBeforeMount(async () => {});
 </script>
-
-<style scoped>
-.sidebar {
-  transition: width 0.3s ease; /* Atur durasi dan jenis transisi */
-}
-.sidebar-active {
-  width: 18%;
-}
-
-.sidebar-inactive {
-  width: 4%;
-}
-</style>

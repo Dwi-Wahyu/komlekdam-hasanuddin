@@ -3,7 +3,14 @@
     <h1 class="text-yellow text-xl font-bold">Tentang Kami</h1>
     <div class="flex flex-col items-center md:flex-row gap-12 md:px-5 mt-4">
       <div class="flex flex-col gap-3">
+        <img
+          class="sm:hidden mb-3 mt-1"
+          src="/public/image/tentang-kami/1.png"
+          alt=""
+        />
+
         <h1 class="font-bold text-2xl">KOMLEKDAM XIV/HASANUDDIN</h1>
+
         <p>
           Komunikasi dan Elektronika Kodam XIV/Hsn yang selanjutnya disebut
           Komlekdam XIV/Hsn adalah salah satu Badan Pelaksana Tingkat Kodam
@@ -16,14 +23,18 @@
         </p>
         <WidgetsButtonBaseButton
           variant="outline"
-          @click="navigateTo('/denkomlekdam')"
+          @click="navigateTo('/komlekdam')"
           class="border-yellow hover:bg-yellow hover:text-white transition-all duration-300 ease-in-out text-yellow w-fit"
         >
           Selengkapnya
         </WidgetsButtonBaseButton>
       </div>
 
-      <img src="/public/image/tentang-kami/1.png" alt="" />
+      <img
+        class="hidden sm:block"
+        src="/public/image/tentang-kami/1.png"
+        alt=""
+      />
     </div>
     <div class="mt-10">
       <WidgetsJudulSection text="JAJARAN KOMLEKDAM XIV/HASANUDDIN" />
@@ -77,22 +88,28 @@ type Jajaran = {
 
 const jajaran: Jajaran[] = [
   {
-    title: "DENHUBDAM",
-    desc: `Detasemen Komunikasi dan Elektronika Korem 141 yang selanjutnya disebut Denkomlek Korem 141 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 141/TP.`,
+    title: "DENKOMLEKDAM XIV/HASANUDDIN",
+    desc: `Detasemen Komunikasi dan Elektronika (Denkomlek) Kodam XIV/Hsn yang selanjutnya disebut Denkomlekdam XIV/Hsn adalah salah satu Unsur Pelaksana Komlekdam di Tingkat Kodam XIV/Hsn berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan di bidang Gelar Komunikasi, Instalasi terbatas sarana Komlek, melaksanakan kegiatan Pernika dan Foto Film Militer di wilayah Kodam XIV/Hsn.`,
     imgUrl: "/image/tentang-kami/2.png",
-    pathSelengkapnya: "/denhubdam",
+    pathSelengkapnya: "/denkomlekdam",
   },
   {
-    title: "DENHUBREM 141",
-    desc: `Detasemen Komunikasi dan Elektronika Korem 142 yang selanjutnya disebut Denkomlek Korem 142 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 142/Tatag.`,
+    title: "DENKOMLEK KOREM 141",
+    desc: `Detasemen Komunikasi dan Elektronika Korem 141 yang selanjutnya disebut Denkomlek Korem 141 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 141/TP.`,
     imgUrl: "/image/tentang-kami/3.png",
-    pathSelengkapnya: "/denhubrem141",
+    pathSelengkapnya: "/denkomlek-korem141",
   },
   {
-    title: "DENHUBREM 142",
-    desc: `Detasemen Komunikasi dan Elektronika Korem 143 yang selanjutnya disebut Denkomlek Korem 143 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 143/HO.`,
+    title: "DENKOMLEK KOREM 142",
+    desc: `Detasemen Komunikasi dan Elektronika Korem 142 yang selanjutnya disebut Denkomlek Korem 142 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 142/Tatag.`,
     imgUrl: "/image/tentang-kami/4.png",
-    pathSelengkapnya: "/denhubrem142",
+    pathSelengkapnya: "/denkomlek-korem142",
+  },
+  {
+    title: "DENKOMLEK KOREM 143",
+    desc: `Detasemen Komunikasi dan Elektronika Korem 143 yang selanjutnya disebut Denkomlek Korem 143 adalah salah satu Badan Pelaksana Tingkat Korem berkedudukan langsung di bawah Kakomlekdam XIV/Hsn dengan tugas pokok menyelenggarakan kegiatan Komunikasi dan Elektronika yang meliputi Komunikasi, Pernika dan Foto Film Militer dan Konbekharstal Mathub dalam rangka mendukung tugas pokok Komlekdam di wilayah Korem 143/HO.`,
+    imgUrl: "/image/tentang-kami/5.png",
+    pathSelengkapnya: "/denkomlek-korem143",
   },
 ];
 </script>

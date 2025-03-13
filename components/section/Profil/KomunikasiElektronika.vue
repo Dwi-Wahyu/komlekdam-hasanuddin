@@ -14,18 +14,18 @@
           class="flex items-center flex-col sm:flex-row gap-5 justify-center"
         >
           <video controls class="w-full sm:w-[30vw]">
-            <source src="/public/image/profil/video.mp4" type="video/mp4" />
+            <source src="/video/PROFILE HUBDAM.mp4" type="video/mp4" />
             Browser tidak mendukung pemutaran video.
           </video>
 
           <p class="text-justify">
             Komunikasi dan Elektronika Kodam XIV/Hsn atau Komlekdam XIV/Hsn
             adalah salah satu Badan Pelaksana Tingkat Kodam, yang bertugas pokok
-            membina dan menyelenggarakan fungsi komunikasi dan elektronika di
-            jajaran Kodam XIV/Hsn. Penyelenggaraan fungsi komlek, dilaksanakan
-            melalui fungsi utamanya yang meliputi pembinaan kecabangan dan
-            Mendukung Komunikasi, elektronika di jajaran Kodam, Pernika dan Foto
-            Film Militer serta Konbekharstal.
+            menyelenggarakan Peperangan Elektronika (Pernika), Komunikasi dan
+            Elektronika, Sistem Komando Pengendalian (Siskodal) dan Informasi,
+            Foto Film Militer, serta Konstruksi, Pembekalan, Pemeliharaan,
+            Instalasi (Konbekharstal) materil perhubungan dalam rangka mendukung
+            tugas pokok Kodam.
           </p>
         </div>
       </div>

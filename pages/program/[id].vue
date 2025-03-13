@@ -7,7 +7,7 @@
     >
       <WidgetsJudulSection text="Kegiatan Pembinaan Fisik (Binsik)" />
       <div class="relative">
-        <img src="/image/program/1.png" alt="" />
+        <img src="/image/program/1.jpeg" alt="" />
         <div
           class="absolute left-0 top-0 w-full h-full flex items-center justify-center"
         >

@@ -1,8 +1,8 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="90"
-    height="90"
+    :width="width"
+    :height="height"
     viewBox="0 0 24 24"
   >
     <rect width="24" height="24" fill="none" />
@@ -25,3 +25,16 @@
     </path>
   </svg>
 </template>
+
+<script setup>
+defineProps({
+  width: {
+    type: String,
+    default: "90",
+  },
+  height: {
+    type: String,
+    default: "90",
+  },
+});
+</script>

@@ -1,7 +1,5 @@
 <template>
   <SectionLitbang />
-
-  <SectionLitbangProgramLainnya />
 </template>
 
 <script setup>

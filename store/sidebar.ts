@@ -7,10 +7,15 @@ export const useMySidebarStore = defineStore("mySidebarStore", {
     menu: menuItems,
     parentActive: "/",
     sidebarActive: true,
+    linkActive: "/",
   }),
   actions: {
     async changeParent(payload: any) {
       this.parentActive = payload;
+    },
+
+    async changeLink(link: string) {
+      this.linkActive = link;
     },
 
     actionSidebar() {

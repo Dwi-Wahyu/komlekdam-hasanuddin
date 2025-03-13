@@ -1,4 +1,23 @@
+<script setup>
+const audioElement = ref(null);
+
+const isPlayed = ref(false);
+
+const togglePlay = () => {
+  isPlayed.value = !isPlayed.value;
+
+  console.log(isPlayed.value);
+
+  if (isPlayed.value) {
+    audioElement.value.pause();
+  } else {
+    audioElement.value.play();
+  }
+};
+</script>
+
 <template>
+  <audio ref="audioElement" src="/lagu/indonesia raya.mp3"></audio>
   <div
     class="bg-[url('/backgrounds/profil-cari-tenar1.jpeg')] md:hidden bg-center bg-cover w-full h-full"
   >
@@ -24,6 +43,15 @@
             <IconsYoutube />
           </div>
         </div>
+      </div>
+
+      <div class="flex items-end relative">
+        <button @click="togglePlay" class="absolute">
+          <IconsPlay v-if="isPlayed" />
+          <IconsStop v-else />
+        </button>
+
+        <img src="/image/cari-tenar/2.png" alt="" />
       </div>
     </div>
   </div>
@@ -54,7 +82,11 @@
         </div>
       </div>
       <div class="flex items-end relative">
-        <img class="absolute" src="/image/cari-tenar/3.png" alt="" />
+        <button @click="togglePlay" class="absolute">
+          <IconsPlay v-if="!isPlayed" />
+          <IconsStop v-else />
+        </button>
+
         <img src="/image/cari-tenar/2.png" alt="" />
       </div>
     </div>

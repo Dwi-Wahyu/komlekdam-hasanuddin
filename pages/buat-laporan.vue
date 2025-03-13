@@ -74,6 +74,12 @@
       </div>
     </form>
   </div>
+
+  <WidgetsPopupToast
+    v-if="showToast"
+    label="Berhasil membuat laporan"
+    @close="toggleToast"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -83,6 +89,12 @@ import { object, string, type InferType } from "yup";
 definePageMeta({
   layout: "landing",
 });
+
+const showToast = ref(false);
+
+function toggleToast() {
+  showToast.value = !showToast.value;
+}
 
 const BuatLaporanSchema = object({
   nama: string().required("Tolong ketik nama"),
@@ -106,11 +118,16 @@ const [pesan, pesanAttrs] = defineField("pesan");
 const onSubmit = handleSubmit(async (values) => {
   console.log(values);
 
-  const createRequest = await $fetch("/api/laporan", {
+  const createRequest = await fetch("/api/laporan", {
     method: "POST",
-    body: values,
+    body: JSON.stringify(values),
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
 
-  console.log(createRequest);
+  if (createRequest.ok) {
+    toggleToast();
+  }
 });
 </script>
