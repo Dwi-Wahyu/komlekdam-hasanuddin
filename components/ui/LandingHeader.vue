@@ -26,9 +26,9 @@
     class="transition-all duration-300 left-0 bg-[#1B1B1B] fixed z-50 ease-in-out p-5 w-full h-screen md:hidden"
     :class="[{ 'bottom-0': isOpen }, { 'bottom-[100vh]': !isOpen }]"
   >
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between mt-16">
       <div class="flex items-center gap-2">
-        <img src="/logo/logo.png" class="max-w-[7vw]" alt="" />
+        <img src="/logo/logo.png" class="w-[7vw]" alt="" />
         <h1 class="font-semibold">KOMLEKDAM XIV/Hasanuddin</h1>
       </div>
       <button @click="toggleIsOpen">
