@@ -9,9 +9,9 @@ const togglePlay = () => {
   console.log(isPlayed.value);
 
   if (isPlayed.value) {
-    audioElement.value.pause();
-  } else {
     audioElement.value.play();
+  } else {
+    audioElement.value.pause();
   }
 };
 </script>
@@ -47,7 +47,7 @@ const togglePlay = () => {
 
       <div class="flex items-end relative">
         <button @click="togglePlay" class="absolute">
-          <IconsPlay v-if="isPlayed" />
+          <IconsPlay v-if="!isPlayed" />
           <IconsStop v-else />
         </button>
 
@@ -92,7 +92,7 @@ const togglePlay = () => {
     </div>
   </div>
 
-  <div class="p-5 md:p-10">
+  <!-- <div class="p-5 md:p-10">
     <WidgetsJudulSection
       :with-out-line="true"
       text="Cerita Inspiratif Komlekdam XIV/Hasanuddin"
@@ -158,5 +158,5 @@ const togglePlay = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
