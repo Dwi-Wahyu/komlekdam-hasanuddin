@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full min-h-screen bg-center bg-cover bg-[url('/backgrounds/program-bg1.jpeg')]"
+    class="w-full bg-center bg-cover bg-[url('/backgrounds/program-bg1.jpeg')]"
   >
     <div
       class="bg-black/50 p-5 sm:p-20 flex pt-24 pb-10 flex-col gap-7 items-center justify-center w-full h-full"

@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full min-h-screen">
+  <div class="w-full">
     <div
-      class="bg-black/50 p-5 sm:p-20 flex pt-24 pb-10 flex-col gap-7 items-center justify-center w-full h-full"
+      class="bg-black/50 p-5 sm:p-20 flex sm:pt-24 py-16 flex-col gap-7 items-center justify-center w-full h-full"
     >
       <WidgetsJudulSection text="Kegiatan Non Program" :with-out-line="true" />
       <div
