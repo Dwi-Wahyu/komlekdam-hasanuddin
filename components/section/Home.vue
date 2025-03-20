@@ -12,7 +12,15 @@
 
       <div class="flex gap-3 mt-3">
         <WidgetsButtonBaseButton> Selengkapnya </WidgetsButtonBaseButton>
-        <WidgetsButtonBaseButton class="text-white" variant="outline">
+        <WidgetsButtonBaseButton
+          @click="
+            navigateTo('https://wa.link/ygcx7l', {
+              external: true,
+            })
+          "
+          class="text-white"
+          variant="outline"
+        >
           Hubungi Kami
         </WidgetsButtonBaseButton>
       </div>
