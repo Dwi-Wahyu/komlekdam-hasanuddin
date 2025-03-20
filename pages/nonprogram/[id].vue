@@ -5,7 +5,7 @@
     <div
       class="bg-black/50 h-full p-20 flex flex-col gap-7 items-center justify-center w-full"
     >
-      <WidgetsJudulSection text="Kegiatan Pembinaan Fisik (Binsik)" />
+      <WidgetsJudulSection :text="detailNonProgram.title" />
       <div class="relative">
         <img
           :src="detailNonProgram.thumbnail"

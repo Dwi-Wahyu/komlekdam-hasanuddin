@@ -2,9 +2,7 @@
   <div
     class="w-full h-screen relative flex flex-col text-yellow bg-[url('/public/backgrounds/landing-background.png')] bg-center bg-cover"
   >
-    <div
-      class="flex mb-16 gap-5 sm:gap-7 flex-col items-center justify-center w-full h-full"
-    >
+    <div class="flex flex-col gap-5 items-center justify-center w-full h-full">
       <h1 class="font-semibold text-lg md:text-2xl">
         Komlekdam XIV/Hasanuddin
       </h1>
@@ -18,9 +16,9 @@
           Hubungi Kami
         </WidgetsButtonBaseButton>
       </div>
-    </div>
-    <div class="absolute bottom-5 right-5">
-      <img src="/image/homeBottomText.svg" alt="" />
+      <div class="pr-9 sm:pr-10 md:pr-[14.6rem]">
+        <img src="/image/home_bottom_text.svg" alt="" />
+      </div>
     </div>
   </div>
 </template>
