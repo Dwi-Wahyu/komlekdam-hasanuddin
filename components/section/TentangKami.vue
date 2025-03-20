@@ -18,7 +18,7 @@
           menyelenggarakan Peperangan Elektronika (Pernika), Komunikasi dan
           Elektronika, Sistem Komando Pengendalian (Siskodal) dan Informasi,
           Foto Film Militer, serta Konstruksi, Pembekalan, Pemeliharaan,
-          instalasi (Konbekharstal) materiel perhubungan dalam rangka mendukung
+          Instalasi (Konbekharstal) materiel perhubungan dalam rangka mendukung
           tugas pokok Kodam.
         </p>
         <WidgetsButtonBaseButton

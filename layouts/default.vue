@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen bg-[#1C2940] text-white py-4 pr-4">
+  <div class="w-full min-h-screen bg-[#172b4c] text-white py-4 pr-4">
     <UiAdminHeader />
 
     <div
@@ -9,7 +9,7 @@
       <Sidebar />
     </div>
     <div
-      class="transition-all ease-in-out duration-300 mt-10"
+      class="transition-all ease-in-out duration-300"
       :class="sidebarStore.sidebarActive ? 'ml-[20.5rem]' : 'ml-20'"
     >
       <slot />

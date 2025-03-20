@@ -12,6 +12,7 @@
       error ? 'border-red-600' : 'border-gray-200',
       variantClasses,
     ]"
+    v-bind="bindAttr"
     :placeholder="placeholder"
   ></textarea>
 </template>
@@ -54,14 +55,18 @@ const props = defineProps({
     type: String,
     default: "normal",
   },
+  bindAttr: {
+    type: Object,
+    default: () => ({}),
+  },
 });
 
 const variantClasses = computed(() => {
   switch (props.variant) {
     case "normal":
-      return "text-left w-full mb-4 focus:outline-none border shadow p-4 rounded-lg";
+      return "text-left w-full focus:outline-none border shadow p-4 rounded-lg";
     case "outline":
-      return "block w-full mb-4 border-b border-yellow px-3 py-2 bg-transparent focus:outline-none";
+      return "block w-full border-b border-yellow px-3 py-2 bg-transparent focus:outline-none";
     default:
       return "";
   }

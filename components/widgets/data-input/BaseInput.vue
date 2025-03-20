@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative">
     <label v-if="label" :for="id" class="block text-sm font-bold mb-2">
       {{ label }}
     </label>
@@ -9,9 +9,14 @@
       :placeholder="placeholder"
       :value="modelValue"
       :disabled="disabled"
+      v-bind="bindAttr"
       @input="$emit('update:modelValue', $event.target.value)"
-      :class="[error ? 'border-danger' : 'border-gray-300', variantClasses]"
+      :class="[error ? 'border-danger' : 'border-yellow', variantClasses]"
     />
+
+    <div class="absolute right-0 bottom-0 pb-[0.4rem] pr-3" v-if="withIcon">
+      <component :is="icon"></component>
+    </div>
   </div>
 </template>
 
@@ -49,12 +54,24 @@ const props = defineProps({
     type: String,
     default: "normal",
   },
+  bindAttr: {
+    type: Object,
+    default: () => ({}),
+  },
+  withIcon: {
+    type: Boolean,
+    default: false,
+  },
+  icon: {
+    type: [Object, Function],
+    default: null,
+  },
 });
 
 const variantClasses = computed(() => {
   switch (props.variant) {
     case "normal":
-      return "block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm";
+      return "block w-full px-3 py-2 border bg-[#1d2941] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm";
     case "outline":
       return "block w-full px-3 py-2 border-b border-yellow bg-transparent focus:outline-none";
     default:

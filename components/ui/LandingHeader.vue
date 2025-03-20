@@ -10,15 +10,90 @@
       <IconsBurger />
     </button>
     <div class="hidden gap-4 items-center md:flex">
-      <button
-        class="text-sm text-yellow hover:underline underline-offset-4"
-        v-for="(nav, navIdx) in navigationMenu"
-        @click="navigate(nav.path)"
-        :class="[{ underline: link == nav.path }]"
-        :key="navIdx"
-      >
-        {{ nav.label }}
-      </button>
+      <div v-for="(nav, navIdx) in navigationMenu">
+        <button
+          v-if="!nav.child"
+          class="text-sm text-yellow hover:underline underline-offset-4"
+          @click="navigate(nav.path)"
+          :class="[{ underline: link == nav.path }]"
+          :key="navIdx"
+        >
+          {{ nav.label }}
+        </button>
+        <div v-else class="relative text-yellow">
+          <button
+            class="text-sm flex items-center gap-1 hover:underline mt-1 underline-offset-4"
+            @click="toggleDropdown"
+          >
+            PPID
+
+            <IconsChevron
+              :class="{ 'rotate-180': !showDropdown }"
+              width="16"
+              height="16"
+            />
+          </button>
+
+          <div
+            class="absolute min-w-56 flex items-start gap-2 mt-1 flex-col top-7 left-4"
+            v-if="showDropdown"
+          >
+            <button
+              class="text-sm hover:underline underline-offset-4"
+              @click="navigateTo('/ppid/profil')"
+            >
+              Profil PPID
+            </button>
+
+            <button
+              class="text-sm hover:underline underline-offset-4"
+              @click="navigateTo('/ppid/struktur-organisasi')"
+            >
+              Struktur Organisasi PPID
+            </button>
+
+            <button
+              class="text-sm hover:underline underline-offset-4"
+              @click="navigateTo('/ppid/tugas-dan-tanggung-jawab')"
+            >
+              Tugas dan Tanggung Jawab PPID
+            </button>
+
+            <button
+              class="text-sm hover:underline items-center flex gap-1 underline-offset-4"
+              @click="toggleSecondDropdown"
+            >
+              Permohonan Informasi
+              <IconsChevron
+                :class="{ 'rotate-180': !showSecondDropdown }"
+                width="16"
+                height="16"
+              />
+            </button>
+
+            <div
+              v-if="showSecondDropdown"
+              class="absolute flex flex-col gap-2 -bottom-14 left-5"
+            >
+              <a
+                class="text-sm hover:underline items-center flex gap-1 underline-offset-4"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScIAZXUCS682rQLvKFYdIxbqbKHlSQY7A8sVe-Bjsb9VbMnJQ/viewform"
+                target="_blank"
+              >
+                Isi Formulir
+              </a>
+
+              <a
+                class="text-sm hover:underline items-center flex gap-1 underline-offset-4"
+                href="https://docs.google.com/document/d/1Z-bpr2cXoyJggs4PFTg4KZzPNxLv602q/edit?tab=t.0"
+                target="_blank"
+              >
+                Unduh Formulir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -26,7 +101,7 @@
     class="transition-all duration-300 left-0 bg-[#1B1B1B] fixed z-50 ease-in-out p-5 w-full h-screen md:hidden"
     :class="[{ 'bottom-0': isOpen }, { 'bottom-[100vh]': !isOpen }]"
   >
-    <div class="flex items-center justify-between mt-16">
+    <div class="flex items-center justify-between">
       <div class="flex items-center gap-2">
         <img src="/logo/logo.png" class="w-[7vw]" alt="" />
         <h1 class="font-semibold">KOMLEKDAM XIV/Hasanuddin</h1>
@@ -39,6 +114,7 @@
     <div class="flex flex-col items-center gap-7 mt-10">
       <div v-for="(nav, navIdx) in navigationMenu">
         <button
+          v-if="!nav.child"
           class="text-yellow"
           :href="nav.path"
           :key="navIdx"
@@ -46,6 +122,83 @@
         >
           {{ nav.label }}
         </button>
+
+        <div
+          v-else
+          class="relative flex items-center flex-col gap-2 text-yellow"
+        >
+          <button
+            class="text-sm flex items-center justify-center gap-1 hover:underline mt-1 underline-offset-4"
+            @click="toggleDropdown"
+          >
+            PPID
+
+            <IconsChevron
+              :class="{ 'rotate-180': !showDropdown }"
+              width="16"
+              height="16"
+            />
+          </button>
+
+          <div
+            class="min-w-56 flex bg-white rounded-lg text-black p-3 items-center gap-2 mt-1 flex-col top-7 left-4"
+            v-if="showDropdown"
+          >
+            <button
+              class="text-sm hover:underline underline-offset-4"
+              @click="navigateTo('/ppid/profil')"
+            >
+              Profil PPID
+            </button>
+
+            <button
+              class="text-sm hover:underline underline-offset-4"
+              @click="navigateTo('/ppid/struktur-organisasi')"
+            >
+              Struktur Organisasi PPID
+            </button>
+
+            <button
+              class="text-sm hover:underline underline-offset-4"
+              @click="navigateTo('/ppid/tugas-dan-tanggung-jawab')"
+            >
+              Tugas dan Tanggung Jawab PPID
+            </button>
+
+            <button
+              class="text-sm hover:underline items-center flex gap-1 underline-offset-4"
+              @click="toggleSecondDropdown"
+            >
+              Permohonan Informasi
+              <IconsChevron
+                :class="{ 'rotate-180': !showSecondDropdown }"
+                width="16"
+                height="16"
+              />
+            </button>
+
+            <div
+              v-if="showSecondDropdown"
+              class="flex flex-col items-center gap-2"
+            >
+              <a
+                class="text-sm hover:underline items-center flex gap-1 underline-offset-4"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScIAZXUCS682rQLvKFYdIxbqbKHlSQY7A8sVe-Bjsb9VbMnJQ/viewform"
+                target="_blank"
+              >
+                Isi Formulir
+              </a>
+
+              <a
+                class="text-sm hover:underline items-center flex gap-1 underline-offset-4"
+                href="https://docs.google.com/document/d/1Z-bpr2cXoyJggs4PFTg4KZzPNxLv602q/edit?tab=t.0"
+                target="_blank"
+              >
+                Unduh Formulir
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -59,6 +212,17 @@ type Navigation = {
   path: string;
   child?: string[];
 };
+
+const showDropdown = ref(false);
+const showSecondDropdown = ref(false);
+
+function toggleDropdown() {
+  showDropdown.value = !showDropdown.value;
+}
+
+function toggleSecondDropdown() {
+  showSecondDropdown.value = !showSecondDropdown.value;
+}
 
 const landingPageStore = useMyLandingPageStore();
 
@@ -81,7 +245,11 @@ const navigationMenu: Navigation[] = [
   { label: "Profil", path: "/profil" },
   { label: "Berita", path: "/berita" },
   { label: "Zona Integritas", path: "/zona-integritas" },
-  { label: "PPID", path: "/ppid", child: [] },
+  {
+    label: "PPID",
+    path: "/ppid",
+    child: [],
+  },
   { label: "Program", path: "/program" },
   { label: "Litbang", path: "/litbang" },
   { label: "Cari Tenar", path: "/cari-tenar" },

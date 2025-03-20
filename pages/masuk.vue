@@ -97,6 +97,9 @@ import { useForm } from "vee-validate";
 import { type TLoginSchema } from "~/schema/login-schema";
 import { loginSchema } from "~/schema/login-schema";
 import { useMyAuthStore } from "~/store/auth";
+import type { TBadRequestResponse } from "~/types/bad.request.response";
+
+const axios = useAxios();
 
 const { data: captchaGenerated, refresh: refreshCaptcha } = useFetch(
   "/api/captcha",
@@ -114,24 +117,38 @@ const [username, usernameAttr] = defineField("username");
 const [password, passwordAttr] = defineField("password");
 const [captcha, captchaAttr] = defineField("captcha");
 
+type RequestType = TBadRequestResponse & {
+  access_token?: string;
+  user?: {
+    id: string;
+    username: string;
+  };
+};
+
 const onSubmit = handleSubmit(async (payload) => {
   if (captcha.value != captchaGenerated.value?.text) {
     setFieldError("captcha", "Kode captcha tidak sesuai");
+    return;
   }
 
-  const createRequest = await $fetch("/api/login", {
-    body: payload,
-    method: "POST",
-  });
+  const createRequest = await axios.post<RequestType>("/auth/login", payload);
 
-  if (createRequest.success) {
-    authStore.token = createRequest.token;
+  if (createRequest.data.access_token) {
+    authStore.token = createRequest.data.access_token;
     authStore.user = { username: "superadmin" };
 
     navigateTo("/admin/dashboard");
   } else {
-    setFieldError("username", "Username Atau Password Salah");
-    setFieldError("password", "Username Atau Password Salah");
+    if (createRequest.data.fieldError) {
+      for (const each of createRequest.data.fieldError) {
+        setFieldError(each.field, each.errorMessage);
+      }
+    }
+
+    if (createRequest.data.statusCode == 401) {
+      setFieldError("username", createRequest.data.message);
+      setFieldError("password", createRequest.data.message);
+    }
   }
 });
 

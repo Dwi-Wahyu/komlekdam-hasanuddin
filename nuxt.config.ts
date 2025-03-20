@@ -27,13 +27,18 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@pinia-plugin-persistedstate/nuxt", "@pinia/nuxt", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@pinia-plugin-persistedstate/nuxt",
+    "@pinia/nuxt",
+    "@nuxt/image",
+  ],
   css: ["~/assets/css/global.css"],
 
   runtimeConfig: {
     public: {
       axios: {
-        baseURL: "http://127.0.0.1:8000/api/",
+        baseURL: "http://localhost:3001",
       },
     },
   },

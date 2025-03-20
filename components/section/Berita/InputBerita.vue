@@ -58,9 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-5">
-        <WidgetsDataInputQuillEditor />
-      </div>
+      <div class="mt-5"></div>
 
       <div class="mt-5 flex justify-center gap-5">
         <WidgetsButtonBaseButton

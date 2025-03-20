@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="relative">
     <label
       v-if="label"
       :for="id"
@@ -8,14 +8,31 @@
     >
       {{ label }} <span v-if="require" class="text-danger">*</span>
     </label>
+
+    <IconsChevron
+      width="18"
+      height="18"
+      class="-rotate-180 absolute right-3 bottom-[0.6rem]"
+    />
+
     <select
       :id="id"
       v-model="selectedValue"
       @change="handleChange"
       :placeholder="placeholder"
-      :class="[padding, error ? 'border-danger' : 'border-gray-300', baseClass]"
+      :class="[
+        padding,
+        error ? 'border-danger' : 'border-yellow',
+        baseClass,
+        'appearance-none pr-10',
+      ]"
     >
-      <option v-for="(option, idx) in options" :key="idx" :value="option.value">
+      <option
+        class="bg-[#30394a]"
+        v-for="(option, idx) in options"
+        :key="idx"
+        :value="option.value"
+      >
         {{ option.label }}
       </option>
     </select>
@@ -70,9 +87,9 @@ const props = defineProps({
 const baseClass = computed(() => {
   switch (props.variant) {
     case "normal":
-      return "block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm";
+      return "block w-full px-3 py-2 border bg-[#1d2941] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm";
     case "underline":
-      return "block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-500 peer";
+      return "block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-yellow appearance-none focus:outline-none focus:ring-0 peer";
   }
 });
 

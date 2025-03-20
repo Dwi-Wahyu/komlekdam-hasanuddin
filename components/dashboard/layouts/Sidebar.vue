@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-full flex-col gap-2 h-full bg-[#303949] rounded-[12px]"
+    class="flex w-full flex-col gap-2 h-full bg-[#303949] shadow-[7px_7px_0px_0px_rgba(0,0,0,0.2)] rounded-[12px]"
     :class="store.sidebarActive ? 'p-4' : 'p-2'"
   >
     <div class="flex flex-col items-center gap-4" v-if="!store.sidebarActive">

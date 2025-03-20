@@ -1,0 +1,35 @@
+=== berita 1 ===
+INOVASI INTERKONEKSI (INTERFACE) RADIO SSB DAN RADIO HT VHF/UHF
+---
+Ahmad Fatir San
+---
+Makassar
+---
+Komunikasi radio merupakan salah satu teknologi yang terus berkembang, terutama dalam menghadapi tantangan geografis dan operasional. Salah satu tantangan yang sering dihadapi adalah bagaimana menghubungkan dua teknologi radio yang berbeda, yaitu High Frequency Single Side Band (HF-SSB) yang beroperasi pada rentang frekuensi 1,8 MHz hingga 30 MHz, dengan Handy Talky (HT) VHF/UHF yang bekerja pada frekuensi 137-173 MHz dan 400-480 MHz. Secara teoritis, hal ini dianggap mustahil oleh banyak praktisi komunikasi radio karena ....
+---
+2025-02-20
+---
+artikel
+---
+      Komunikasi radio merupakan salah satu teknologi yang terus berkembang, terutama dalam menghadapi tantangan geografis dan operasional. Salah satu tantangan yang sering dihadapi adalah bagaimana menghubungkan dua teknologi radio yang berbeda, yaitu High Frequency Single Side Band (HF-SSB) yang beroperasi pada rentang frekuensi 1,8 MHz hingga 30 MHz, dengan Handy Talky (HT) VHF/UHF yang bekerja pada frekuensi 137-173 MHz dan 400-480 MHz. Secara teoritis, hal ini dianggap mustahil oleh banyak praktisi komunikasi radio karena perbedaan mendasar dalam rentang frekuensi, karakteristik propagasi gelombang, dan sistem modulasi yang digunakan.
+ 
+       Perangkat HF-SSB dirancang untuk komunikasi jarak jauh dengan memanfaatkan gelombang ionosfer, sementara radio VHF/UHF lebih cocok untuk komunikasi jarak dekat dengan propagasi garis pandang. Perbedaan ini menciptakan tantangan teknis yang signifikan, termasuk perbedaan dalam system modulasi, daya pancar, dan arsitektur teknis. Selain itu, konstruksi elektronik yang berbeda, karakteristik sinyal, serta kebutuhan akan impedansi dan filter khusus menambah kompleksitas dalam menghubungkan kedua sistem tersebut.
+ 
+      Namun, tantangan teknis ini justru menjadi pemicu lahirnya inovasi transformatif. Berangkat dari kebutuhan operasional di lapangan, Tim Litbang/Rekayasa Hubdam XIV/Hasanuddin berhasil merancang sebuah interface yang mampu menjembatani kesenjangan teknologi antara radio SSB dan VHF/UHF. Tujuan dari penulisan artikel ini adalah untuk membuka wawasan baru dalam pengembangan sistem komunikasi konvensional, serta memberikan solusi praktis yang dapat mendukung tugas TNI, khususnya dalam bidang komunikasi dan elektronika (Komlek).
+
+Pendahuluan
+ 
+      Komunikasi adalah jembatan yang menghubungkan manusia melintasi batas-batas geografis. Dalam dunia radio komunikasi, setiap teknologi memiliki keterbatasan tersendiri. Perangkat Single Side Band (SSB) yang bekerja pada frekuensi High Frequency (HF) sangat efektif untuk komunikasi jarak jauh, sementara perangkat Very High Frequency (VHF) dan Ultra High Frequency (UHF) lebih cocok untuk komunikasi area terbatas.
+ 
+    Inovasi interface radio yang dikembangkan oleh Tim Litbang/Rekayasa Hubdam XIV/Hasanuddin bertujuan untuk agar menjadi salahsatu solusi perbedaan teknis keduanya. Dengan adanya interface ini, jangkauan komunikasi dapat diperluas tanpa perlu melakukan modifikasi rumit pada perangkat yang sudah ada. Teknologi ini memungkinkan pengguna radio untuk meningkatkan kemampuan komunikasi secara signifikan, membuka peluang baru dalam mengatasi tantangan komunikasi di era modern, terutama di wilayah dengan medan dan geografis yang beragam. Wilayah teritorial Kodam XIV/Hasanuddin, yang mencakup tiga provinsi Sulawesi Selatan (luas 46.717,48 km²), Sulawesi Tenggara (38.140 km²), dan Sulawesi Barat (16.787,18 km²) menjadi contoh dibutuhkannya solusi untuk mengkoneksikannya komunikasi HF dengan VHF/UHF tersebut. Dengan kondisi geografis yang bervariasi, inovasi ini diharapkan dapat memberikan kontribusi nyata dalam mendukung tugas operasional TNI, khususnya dalam bidang komunikasi dan elektronika (Komlek).
+ 
+Teknologi Dasar
+ 
+     Teknologi radio SSB dan VHF/UHF memiliki karakteristik teknis yang berbeda. SSB beroperasi pada rentang frekuensi 1,8–30 MHz dengan modulasi jalur tunggal memungkinkan komunikasi jarak jauh yang efisien melalui pemanfaatan gelombang ionosfer, sehingga dapat menjangkau lintas benua dengan daya pancar rendah. Sementara radio VHF/UHF beroperasi pada frekuensi 137–173 MHz dan 400–480 MHz dengan jangkauan lebih terbatas. Perangkat VHF/UHF terdiri dari dua tipe yaitu Handy Talky (HT) dengan daya output sekitar 5 watt dan Rig dengan daya output hingga 50 watt untuk komunikasi jarak lebih jauh. Keduanya menggunakan mode half-duplex yang membatasi kemampuan komunikasi dan menjadi tantangan utama dalam pengembangan interface ini.
+ 
+      Perbedaan mendasar antara kedua teknologi ini terletak pada cara kerja dan karakteristik propagasi sinyalnya. SSB mengandalkan refleksi gelombang radio oleh lapisan ionosfer untuk mencapai jarak yang jauh, sementara VHF/UHF bergantung pada propagasi garis pandang (line-of-sight), yang membuatnya ideal untuk komunikasi jarak dekat. Perbedaan ini menciptakan tantangan teknis yang signifikan, terutama dalam hal integrasi kedua sistem untuk mencapai komunikasi yang efektif dan efisien.
+ 
+Konsep Interface
+ 
+     Berdasarkan kebutuhan dan kendala dilapangan sehingga Tim Litbang/Rekayasa Hubdam XIV/Hsn menciptakan sebuah inovasi penggabungan sistem komunikasi Radio SSB dan VHF/UHF. Tantangan utama dalam komunikasi radio sering kali ditemui adalah keterbatasan jangkauan dan perbedaan karakteristik frekuensi. Interface yang dikembangkan bertujuan menjembatani kesenjangan teknologi ini, sehingga memungkinkan pengguna untuk melakukan komunikasi antar kedua radio tersebut.
+ 
