@@ -1,7 +1,12 @@
 <template>
-  <h1 class="text-yellow text-lg">
-    Kakomlekdam dan Wakakomlekdam XIV/ Hasanuddin
-  </h1>
+  <div class="flex gap-1 items-center">
+    <button @click="navigateTo('/admin/profil')">
+      <IconsChevron width="20" height="20" class="-rotate-90" />
+    </button>
+    <WidgetsAdminPageTitle
+      title="Kakomlekdam dan Wakakomlekdam XIV/ Hasanuddin"
+    />
+  </div>
 
   <div class="mt-5 grid grid-cols-1 gap-7 md:grid-cols-2">
     <div v-for="(kepala, kepalaIdx) in data">
@@ -50,6 +55,11 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: "default",
+  middleware: "auth",
+});
+
 type Kepala = {
   kakomlekdam: {
     nama: string;

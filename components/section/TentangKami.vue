@@ -1,6 +1,8 @@
 <template>
   <div class="w-full p-5 py-10 pb-16">
-    <h1 class="text-yellow text-xl font-bold">Tentang Kami</h1>
+    <h1 class="text-yellow text-xl font-bold" id="tentang-kami">
+      Tentang Kami
+    </h1>
     <div class="flex flex-col items-center md:flex-row gap-12 md:px-5 mt-4">
       <div class="flex flex-col gap-3">
         <img

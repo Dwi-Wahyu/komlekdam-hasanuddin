@@ -1,6 +1,7 @@
 <template>
   <div
     class="w-full cursor-pointer flex shadow-[7px_7px_0px_0px_rgba(0,0,0,0.2)] p-5 transition-all ease-in-out duration-300 text-yellow hover:shadow-yellow flex-col gap-5 items-center justify-center bg-[#1d242e] h-full"
+    :class="minHeight"
     @click="handleClickUpload"
   >
     <input
@@ -51,6 +52,10 @@ const props = defineProps({
   label: {
     type: String,
     default: "Upload Thumbnail Berita",
+  },
+  minHeight: {
+    type: String,
+    default: "min-h-40",
   },
 });
 

@@ -10,13 +10,13 @@
       class="mt-4"
     />
 
-    <div class="px-7 grid gap-7 grid-cols-3 py-6 bg-[#30394a]">
+    <div v-if="loading" class="px-7 py-6 bg-[#30394a]">
+      <h1>Loading ...</h1>
+    </div>
+
+    <div v-else class="px-7 grid gap-7 grid-cols-3 py-6 bg-[#30394a]">
       <div class="flex justify-center bg-[#1d242e] items-center">
-        <div v-if="loading">
-          <h1>Loading ...</h1>
-        </div>
         <img
-          v-else
           :src="`${baseURL}/profil/${data?.pasfoto}`"
           class="max-w-52"
           alt=""
@@ -99,7 +99,7 @@ const {
   data,
   refresh: refreshData,
   pending: loading,
-} = useMyFetch<Kepala>(`/api/pejabat/kepala/${jabatan}`, {
+} = await useMyFetch<Kepala>(`/api/pejabat/kepala/${jabatan}`, {
   lazy: true,
 });
 
@@ -107,7 +107,7 @@ const runtimeConfig = useRuntimeConfig();
 const { baseURL } = runtimeConfig.public.axios;
 
 const pasfoto = ref<File | undefined>();
-const nama = ref(data.value?.nama as string);
+const nama = ref();
 const jabatanKepala = ref(jabatan as string);
 
 const axios = useAxios();
@@ -155,10 +155,12 @@ async function handleGantiPasfoto() {
   );
 
   if (postRequest.data.success) {
-    toggleAlert();
-    refreshData();
-    toggleToast();
     toastLabel.value = postRequest.data.message;
+
+    window.location.reload();
+
+    toggleAlert();
+    toggleToast();
   }
 }
 
@@ -178,4 +180,10 @@ async function handleSubmit() {
     toastLabel.value = putRequest.data.message;
   }
 }
+
+onMounted(() => {
+  if (data.value) {
+    nama.value = data.value.nama;
+  }
+});
 </script>

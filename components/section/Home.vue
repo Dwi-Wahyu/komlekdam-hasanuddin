@@ -11,13 +11,11 @@
       </h1>
 
       <div class="flex gap-3 mt-3">
-        <WidgetsButtonBaseButton> Selengkapnya </WidgetsButtonBaseButton>
+        <WidgetsButtonBaseButton @click="scrollToTentangKami">
+          Selengkapnya
+        </WidgetsButtonBaseButton>
         <WidgetsButtonBaseButton
-          @click="
-            navigateTo('https://wa.link/ygcx7l', {
-              external: true,
-            })
-          "
+          @click="scrollToBottom"
           class="text-white"
           variant="outline"
         >
@@ -25,8 +23,27 @@
         </WidgetsButtonBaseButton>
       </div>
       <div class="pr-9 sm:pr-10 md:pr-[14.6rem]">
-        <img src="/image/home_bottom_text.svg" alt="" />
+        <img
+          src="/public/image/Elektronika tidak memenangkan pertempuran.svg"
+          alt=""
+        />
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+function scrollToBottom() {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
+}
+
+function scrollToTentangKami() {
+  const target = document.getElementById("tentang-kami");
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+}
+</script>

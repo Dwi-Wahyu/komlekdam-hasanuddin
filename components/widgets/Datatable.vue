@@ -64,13 +64,11 @@
                   {{ loopItem[value.split(":")[2]] }},
                 </div>
               </div>
-              <div v-else-if="value.includes('img')">
+              <div v-else-if="value.includes('img')" class="max-w-16">
                 <img
-                  :src="`${baseURL}/${value.split(':')[2]}/${
-                    row[value.split(':')[1]]
-                  }`"
+                  :src="`${baseURL}/${row[value.split(':')[1]]}`"
                   alt=""
-                  class="max-w-40"
+                  class="max-w-32 my-3"
                 />
               </div>
               <div v-else-if="value.includes('tooltip')">
@@ -159,11 +157,11 @@ const { baseURL } = runtimeConfig.public.axios;
 const openDropdown = ref(null);
 
 const toggleDropdown = (index) => {
-  if (openDropdown.value == null) {
-    document.body.classList.add("no-scroll");
-  } else {
-    document.body.classList.remove("no-scroll");
-  }
+  // if (openDropdown.value == null) {
+  //   document.body.classList.add("no-scroll");
+  // } else {
+  //   document.body.classList.remove("no-scroll");
+  // }
 
   openDropdown.value = openDropdown.value === index ? null : index;
 };

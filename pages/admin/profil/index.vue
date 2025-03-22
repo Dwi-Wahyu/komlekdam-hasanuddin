@@ -26,6 +26,7 @@
 <script setup>
 definePageMeta({
   middleware: "auth",
+  layout: "default",
 });
 
 const cardData = [
@@ -37,17 +38,17 @@ const cardData = [
   },
   {
     title: "Pejabat Satuan",
-    bukaLink: "/admin/profil/pejabat",
+    bukaLink: "/admin/profil/pejabat-satuan",
     description: "Menu Edit Pejabat Satuan Kakomlekdam XIV/Hsn",
   },
   {
     title: "Kepala Satuan dari masa ke masa",
-    bukaLink: "/admin/sejarah-kepala-satuan",
+    bukaLink: "/admin/profil/kepala-satuan-lampau",
     description: "Menu Edit Kakomlekdam XIV/Hsn dari masa ke masa",
   },
   {
     title: "Mitra",
-    bukaLink: "/admin/mitra",
+    bukaLink: "/admin/profil/mitra",
     description: "Menu Edit Mitra Satuan Kakomlekdam XIV/Hsn",
   },
 ];

@@ -12,24 +12,48 @@
       <img src="/logo/logo.png" alt="" />
       <h1 class="font-semibold">KOMLEKDAM XIV/Hasanuddin</h1>
     </div>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-2">
       <h1 class="font-semibold">Kontak dan Sosial Media Kami</h1>
-      <div class="flex items-center gap-1">
+      <a
+        target="blank"
+        href="http://wa.me/+6282151047739"
+        class="flex items-center gap-1"
+      >
         <IconsWhatsapp />
-        <h1 class="text-sm">+62 8132 916 1000</h1>
-      </div>
-      <div class="flex items-center gap-1">
+        <h1 class="text-sm">+6282151047739</h1>
+      </a>
+      <a
+        target="blank"
+        href="http://instagram.com/hubdamxivhasanuddin"
+        class="flex items-center gap-1"
+      >
         <IconsInstagram />
         <h1 class="text-sm">@hubdamxivhasanuddin</h1>
-      </div>
-      <div class="flex items-center gap-1">
+      </a>
+      <a
+        target="blank"
+        href="http://web.facebook.com/hubdam.xiv"
+        class="flex items-center gap-1"
+      >
         <IconsFacebook />
         <h1 class="text-sm">Hubdam Hasanuddin</h1>
-      </div>
-      <div class="flex items-center gap-1">
+      </a>
+      <a
+        target="blank"
+        href="https://x.com/hubdamxiv"
+        class="flex items-center gap-1"
+      >
+        <IconsTwitter />
+        <h1 class="text-sm">@Hubdamxiv</h1>
+      </a>
+      <a
+        target="blank"
+        href="http://tiktok.com/@komlekdam14"
+        class="flex items-center gap-1"
+      >
         <IconsTiktok />
-        <h1 class="text-sm">Komlekdam14</h1>
-      </div>
+        <h1 class="text-sm">@komlekdam14</h1>
+      </a>
     </div>
 
     <div class="flex flex-col gap-1">
