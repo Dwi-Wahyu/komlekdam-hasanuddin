@@ -98,10 +98,10 @@
   </div>
 
   <div
-    class="transition-all duration-300 left-0 bg-[#1B1B1B] fixed z-50 ease-in-out p-5 w-full h-screen md:hidden"
-    :class="[{ 'bottom-0': isOpen }, { 'bottom-[100vh]': !isOpen }]"
+    class="transition-all duration-300 left-0 bg-[#1B1B1B] fixed z-50 ease-in-out px-5 py-6 w-full h-screen md:hidden"
+    :class="[{ 'top-0': isOpen }, { '-top-[100vh]': !isOpen }]"
   >
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between mb-8">
       <div class="flex items-center gap-2">
         <img src="/logo/logo.png" class="w-[7vw]" alt="" />
         <h1 class="font-semibold">KOMLEKDAM XIV/Hasanuddin</h1>
@@ -111,7 +111,7 @@
       </button>
     </div>
 
-    <div class="flex flex-col items-center gap-7 mt-10">
+    <div class="flex flex-col items-center gap-7">
       <div v-for="(nav, navIdx) in navigationMenu">
         <button
           v-if="!nav.child"

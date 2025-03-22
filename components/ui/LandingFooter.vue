@@ -54,6 +54,14 @@
         <IconsTiktok />
         <h1 class="text-sm">@komlekdam14</h1>
       </a>
+      <a
+        target="blank"
+        href="https://www.youtube.com/@komlekdamXIVhasanuddin"
+        class="flex items-center gap-1"
+      >
+        <IconsYoutubeOutline />
+        <h1 class="text-sm">@komlekdamXIVhasanuddin</h1>
+      </a>
     </div>
 
     <div class="flex flex-col gap-1">
